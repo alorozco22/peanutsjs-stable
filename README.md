@@ -85,13 +85,13 @@ To use *PeanutsJS*, first configure your environment. Please follow the next ste
 Next, clone *PeanutsJS* repository into your computer:
 
 ```
-git clone ....
+git clone https://github.com/alorozco22/peanutsjs.git
 ```
 
 Now, place your command prompt inside your *PeanutsJS* directory and install the required dependencies:
 
 ```
-cd *PeanutsJS*
+cd *peanutsjs*
 npm install
 ```
 
