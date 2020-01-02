@@ -91,7 +91,7 @@ git clone https://github.com/alorozco22/peanutsjs.git
 Now, place your command prompt inside your *PeanutsJS* directory and install the required dependencies:
 
 ```
-cd *peanutsjs*
+cd peanutsjs
 npm install
 ```
 
