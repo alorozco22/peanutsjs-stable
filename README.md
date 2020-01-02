@@ -17,13 +17,13 @@
 1. [Acknowledgments](#acknowledgments)
 
 ## Introduction
-*PeanutsJS* is my own implementation of the Model-View-Controller ([MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)) concept in Node.js. It is an [Express](https://expressjs.com/) based server with MVC architecture. It employs [mySQL](https://www.mysql.com/) databases to store pesistent data and authentication information with hashed passwords. It's clearly organized to use [EJS](https://ejs.co/) templates engine. You can run it locally, deploy it to [Heroku](https://www.heroku.com/) or to any other [PASS](https://en.wikipedia.org/wiki/Platform_as_a_service) as with any other web app.
+*PeanutsJS* is my own implementation of the Model-View-Controller ([MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)) concept in Node.js. It is an [Express](https://expressjs.com/) based server with MVC architecture. It employs [mySQL](https://www.mysql.com/) databases to store persistent data and authentication information with hashed passwords. It's clearly organized to use [EJS](https://ejs.co/) templates engine. You can run it locally, deploy it to [Heroku](https://www.heroku.com/) or to any other [PASS](https://en.wikipedia.org/wiki/Platform_as_a_service) as with any other web app.
 
 With *PeanutsJS* you will be able to:
 
 * Create **static websites** to serve pages. *(However, if this is your purpose, you may want to check out [GitHub Pages](https://pages.github.com/) for a simpler solution).*
 * Develop **interactive websites** with forms, dynamic content, etc.
-* **Authentication systems** to select displayed contents to diferent users, and **persistent sessions**.
+* **Authentication systems** to select displayed contents to different users, and **persistent sessions**.
 * You will have absolute flexibility to edit pages, styles, elements, and requests handling, etc. You could even [create a platformer](https://youtu.be/FGxdoHezkks?t=393), or a [real time multiplayer](http://buildnewgames.com/real-time-multiplayer/) within *PeanutsJS*.
 
 
@@ -33,15 +33,15 @@ With *PeanutsJS* you will be able to:
 
 ## Model View Controller
 
-Model View Controller (MVC) is a concept related to how to organize code in self contained modules with clear responsibilities. This makes the process of increasing functionality easy and viable. You will find a lot of information about it in the web. However, how to implement the concept may be confusing at first glance. MVC can be applied to many contexts; and, there are many ways of implementing MVC. *PeanutsJS* follows the next pattern for the web development context:
+Model View Controller (MVC) is a concept related to how to organize code in self-contained modules with clear responsibilities. This makes the process of increasing functionality easy and viable. You will find a lot of information about it in the web. However, how to implement the concept may be confusing at first glance. MVC can be applied to many contexts; and, there are many ways of implementing MVC. *PeanutsJS* follows the next pattern for the web development context:
 
 ![MVC](./04-doc/MVC-organized.png)
 
 1. The **user** interacts directly with the web browser.
 1. The browser makes a **request** to the app or emits some order under some information protocol.
 1. The **Router** is a .js file. It has a reference to the **express server** (app), so it declares the functions associated to every request in the app, and to the **controller**, so it calls the correspondent function defined inside it.
-1. The **Controller** is another .js module. It recieves as parameters the request and response objects from the router. The controller asks the models to process the request's data.
-1. The **Models** are divided into separate .js files. Thereby, the logic and data handling of the app can be easily modularized in managable, self-contained files. A function in a model **returns** the processed data to the controller.
+1. The **Controller** is another .js module. It receives as parameters the request and response objects from the router. The controller asks the models to process the request's data.
+1. The **Models** are divided into separate .js files. Thereby, the logic and data handling of the app can be easily modularized in manageable, self-contained files. A function in a model **returns** the processed data to the controller.
 1. Once the controller has the processed information, it **renders, sends a file, etc.** to display to the user from the views via the response object. These are simple html, css, ejs and client javascript files.
 1. Finally, the browser **displays** the rendered file or response to the user.
 
@@ -61,7 +61,7 @@ To understand the authentication example, visit the document: [Sessions and Auth
 
 To use *PeanutsJS* you need to install [Node.js](https://nodejs.org/). If you want to use database functions, you will have to install [mySQL Community Server](https://dev.mysql.com/downloads/installer/). I recommend to install the [mySQL Workbench](https://dev.mysql.com/downloads/workbench/) as well, so you can visually check the state of your databases.
 
-To install the required software for *PeanutsJS* to work, you should excecute
+To install the required software for *PeanutsJS* to work, you should execute
 
 ```
 npm install
@@ -72,7 +72,7 @@ Follow the [Installing](#installing) section for a detailed explanation on how t
 
 To deploy to Heroku, you will need the Heroku CLI, follow the [Deployment section](#deployment) for more details.
 
-You will need a text editor as well. There are many options for you to choose. One of the most common editors is [Visual Studio Code](https://code.visualstudio.com/), as a complete development environment. [Atom](https://atom.io/) is another great option. I personaly like [Sublime Text](https://www.sublimetext.com/) because of its elegantly light nature and huge versatility to work with any language. 
+You will need a text editor as well. There are many options for you to choose. One of the most common editors is [Visual Studio Code](https://code.visualstudio.com/), as a complete development environment. [Atom](https://atom.io/) is another great option. I personally like [Sublime Text](https://www.sublimetext.com/) because of its elegantly light nature and huge versatility to work with any language. 
 
 ## Installing
 
@@ -147,7 +147,7 @@ You have to provision a database addon. By default, *PeanutsJS* uses [ClearDB My
 * [MySQL](https://www.mysql.com/) - Database 
 * [EJS](https://ejs.co/) - Templating language
 
-Every asynchronous instruction is writen in native [Promises](https://www.promisejs.org/) syntax.
+Every asynchronous instruction is written in native [Promises](https://www.promisejs.org/) syntax.
 
 ## Contributing
 <!--
@@ -168,5 +168,5 @@ This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.t
 ## Acknowledgments
 
 * Thanks to Asim Hussain's wonderful course on [Asynchronous JavaScript](https://www.udemy.com/course/asynchronous-javascript).
-* Thanks to [W3Schools](https://www.w3schools.com/) with whose extreamly clear courses I took my first steps in web development nearly nine eight ago.
+* Thanks to [W3Schools](https://www.w3schools.com/) with whose extremely clear courses I took my first steps in web development nearly nine eight ago.
 * [Billie Thompson](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) for her excellent readme file template.

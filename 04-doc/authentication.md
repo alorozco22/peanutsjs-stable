@@ -1,12 +1,12 @@
 # Sessions and Authentication
 
-The authentication example in PeanutsJS follows [Randall Degges Talk](https://youtu.be/j8Yxff6L_po) on authentication systems in Node.js. I recomend you watch it first, so you have a general idea. [bcryptjs](https://www.npmjs.com/package/bcryptjs) library is used to hash passwords in the database. This way, you won't be able to recover a plain password from a database; instead, you will hash the inserted password, and check if the hashes coincide.
+The authentication example in PeanutsJS follows [Randall Degges Talk](https://youtu.be/j8Yxff6L_po) on authentication systems in Node.js. I recommend you watch it first, so you have a general idea. [bcryptjs](https://www.npmjs.com/package/bcryptjs) library is used to hash passwords in the database. This way, you won't be able to recover a plain password from a database; instead, you will hash the inserted password, and check if the hashes coincide.
 
 There are four kinds of content when speaking about authentication in PeanutsJS:
 
-- **Registration pages:** its view contains a form that emits a post request to modify the database and introduce new login credentials in the table of credentials. Depending on the problem, you may not want lo leave it accesible.
+- **Registration pages:** its view contains a form that emits a post request to modify the database and introduce new login credentials in the table of credentials. Depending on the problem, you may not want to leave it accessible.
 - **Login page:** its view contains a form that emits a post request to create a new active session.
-- **Restricted pages:** if the session username and password hash are recognized, these are rendered; otherwise, the user recieves a non-authorized error.
+- **Restricted pages:** if the session username and password hash are recognized, these are rendered; otherwise, the user receives a non-authorized error.
 - **Non-restricted pages:** it is rendered directly from a get request without checking authentication details.
 
 ## Getting Started
@@ -53,7 +53,7 @@ app.use(
 
 ## Registration Page
 
-Since this page has a form, it follows both procedures in the [forms section](#forms) when the **controller** is renderign the **views**.
+Since this page has a form, it follows both procedures in the [forms section](#forms) when the **controller** is rendering the **views**.
 
 There are two functions defined in the **sessionModel** for this page: 
 
@@ -75,7 +75,7 @@ In the controller, you overwritte the req.body.password element once the model h
 req.body.password = data.hash;
 ```
 
-* **userAlreadyTaken:** It takes a username and checks wether it was already taken.
+* **userAlreadyTaken:** It takes a username and checks whether it was already taken.
 
 The users table is created when initializing the model. Since the database was created in the exampleModel, it's not created again.
 
@@ -127,7 +127,7 @@ let getRestricted = function(req,res){
 
 ### CSRF
 
-Every form has a hidden input with a random number named *"\_csrf"* to protect against cross site request forgery. [CSURF library](https://www.npmjs.com/package/csurf) is used as a middleware to handle the random tokens. To add a token to a form, first render the form with the **csrfToken** aditional information from the controller:
+Every form has a hidden input with a random number named *"\_csrf"* to protect against cross site request forgery. [CSURF library](https://www.npmjs.com/package/csurf) is used as a middleware to handle the random tokens. To add a token to a form, first render the form with the **csrfToken** additional information from the controller:
 
 ```js
 res.render('./ejs/signup', {csrfToken: req.csrfToken(), error:''});	

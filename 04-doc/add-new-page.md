@@ -135,9 +135,9 @@ That's it! You have just inserted a new page into an MVC architecture.
 
 ## Forms
 
-Additionally, if your new page has a form, you should also follow the next analogous steps to handle the request when the form is submited.
+Additionally, if your new page has a form, you should also follow the next analogous steps to handle the request when the form is submitted.
 
-1. **Router:** Call the function in the controller to handle the **post** request with the same route once the form is submited.
+1. **Router:** Call the function in the controller to handle the **post** request with the same route once the form is submitted.
 1. **Controller:** Define a function that calls the function in the model to process the form request. Add it to the *module.exports* object as well.
 1. **Model:** Define the function you called in the controller to process the request data.
 1. **Views:** Your controller should send some response once the model has a result of the operation. You could render a new page from the views, or you could send some object in response:
