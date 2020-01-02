@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="./ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="./css/basic-responsive.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col-10">
+			<h1>Login Page</h1>
+			<p><%=error %></p>
+			<form method="post" action="./login">
+				Username:<br>
+				<input type="text" name="username"><br>
+				New Password:<br>
+				<input type="text" name="password"><br>
+				<input type="hidden" name="_csrf" value="<%=csrfToken %>">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<div class="col-1"></div>
+	</div>
+		
+</body>
+</html>

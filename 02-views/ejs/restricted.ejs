@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="./ico/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./ico/favicon-16x16.png">
+	<link rel="stylesheet" type="text/css" href="./css/basic-responsive.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-6">
+			<img src="./img/peanuts.jpg">
+			<p>Thanks for the picture to <a href="https://flickr.com/photos/30478819@N08/48392416737/">Marco Verch</a>, with licence Attribution 2.0 Generic (CC BY 2.0).</p>
+			<form method="post" action="/logout">
+				<input type="submit" name="logout" value="Logout">
+				<input type="hidden" name="_csrf" value="<%=csrfToken %>">
+			</form>
+		</div>
+		<div class="col-3"></div>
+	</div>
+</body>
+</html>
