@@ -33,6 +33,7 @@ let createDB = function(){
 			});
 			con.end();	
 		} else {
+			dbOptions.database=process.env.DBNAME; // NOTE WE ADD THE ATTRIBUTE DATABASE ONCE WE CREATE IT
 			resolve('::Example Model:: Database peanutsDB created.');
 		}
 	});
