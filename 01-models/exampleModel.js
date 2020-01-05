@@ -12,23 +12,29 @@ let dbOptions = {
 	password: process.env.DBPASSWORD,
 };
 
+let LOCAL = (process.env.RUNNING_LOCAL == 'true');
+
 /* Database creation
 	It shall not be called when in Heroku free mySQL
 */
 let createDB = function(){
 	return new Promise((resolve, reject)=>{
-		let con = mysql.createConnection(dbOptions);
-		dbOptions.database=process.env.DBNAME; // NOTE WE ADD THE ATTRIBUTE DATABASE ONCE WE CREATE IT
-		
-		con.connect(function(err){
-			if(err) {console.log('::Example Model:: Error connecting to DB.');reject(err);}
-		});
+		if (LOCAL == true){
+			let con = mysql.createConnection(dbOptions);
+			dbOptions.database=process.env.DBNAME; // NOTE WE ADD THE ATTRIBUTE DATABASE ONCE WE CREATE IT
+			
+			con.connect(function(err){
+				if(err) {console.log('::Example Model:: Error connecting to DB.');reject(err);}
+			});
 
-		con.query('CREATE DATABASE IF NOT EXISTS '+dbOptions.database, function(err, result) {
-			if(err) {console.log('::Example Model:: Error creating peanutsDB database.');reject(err);}
+			con.query('CREATE DATABASE IF NOT EXISTS '+dbOptions.database, function(err, result) {
+				if(err) {console.log('::Example Model:: Error creating peanutsDB database.');reject(err);}
+				resolve('::Example Model:: Database peanutsDB created.');
+			});
+			con.end();	
+		} else {
 			resolve('::Example Model:: Database peanutsDB created.');
-		});
-		con.end();
+		}
 	});
 }
 

@@ -76,7 +76,19 @@ You will need a text editor as well. There are many options for you to choose. O
 
 ## Installing
 
-To use *PeanutsJS*, first configure your environment. Please follow the next steps:
+*PeanutsJS* comes with some examples when you first clone it. The next are the **routes you can visit in the life server**: 
+
+* **/** - Default route, you will find an example page that uses database query. Every time you load it a random person is taken from the database, you will see their information.
+
+* **/signup** - You will find a form to register a new user. The user will have access to the restricted content.
+
+* **/login** - You will find a form to authenticate as a registered user. Only after authenticating, you will have access to the restricted content.
+
+* **/restricted** - An example restricted content page. You will see a button to logout as well.
+
+You can see the **[Life Demo](https://peanutsjs.herokuapp.com/)**.
+
+To use *PeanutsJS* locally, first configure your environment. Please follow the next steps:
 
 1. [Install mySQL server and Workbench](https://www.youtube.com/watch?v=u96rVINbAUI)
 1. Remember to download and install [Node.js](https://nodejs.org/).
@@ -136,9 +148,11 @@ Give an example
 
 ## Deployment
 
-You can deploy to any service you prefere. I use Heroku, the free service is enough for many apps. To deploy to heroku, pleace follow [this article](https://devcenter.heroku.com/articles/deploying-nodejs). 
+You can deploy to any service you prefere. I use Heroku, the free service is enough for many apps. To deploy to heroku, please follow [this article](https://devcenter.heroku.com/articles/deploying-nodejs). 
 
 You have to provision a database addon. By default, *PeanutsJS* uses [ClearDB MySQL](https://elements.heroku.com/addons/cleardb), however, you can configure any other, like PostgreSQL, etc.
+
+To [deploy de Hello World](./04-doc/deployment.md) web app on Heroku, read the article.
 
 ## Built With
 
