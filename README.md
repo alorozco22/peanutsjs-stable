@@ -148,11 +148,9 @@ Give an example
 
 ## Deployment
 
-You can deploy to any service you prefere. I use Heroku, the free service is enough for many apps. To deploy to heroku, please follow [this article](https://devcenter.heroku.com/articles/deploying-nodejs). 
+You can deploy to any service you prefere. I use Heroku, the free service is enough for many apps. To deploy to heroku, please follow [this article](./04-doc/deployment.md). 
 
-You have to provision a database addon. By default, *PeanutsJS* uses [ClearDB MySQL](https://elements.heroku.com/addons/cleardb), however, you can configure any other, like PostgreSQL, etc.
-
-To [deploy de Hello World](./04-doc/deployment.md) web app on Heroku, read the article.
+Follow the next article to find [general information](https://devcenter.heroku.com/articles/deploying-nodejs) on how to deploy Node.js to Heroku.
 
 ## Built With
 
