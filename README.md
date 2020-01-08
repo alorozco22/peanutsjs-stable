@@ -116,6 +116,12 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[myPassw
 ```
 Replace *[myPassword]* with your own password for connecting to the database.
 
+Install your dependencies by running: 
+
+```
+npm install
+```
+
 Finally, execute your server with:
 
 ```
