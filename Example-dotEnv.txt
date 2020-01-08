@@ -22,3 +22,5 @@ DBPORT=3306
 DBUSER=root
 DBPASSWORD=myPassword
 DBNAME=peanutsdb
+RUNNING_LOCAL=true
+SESSIONSECRET=somelongstring
