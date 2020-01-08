@@ -116,6 +116,36 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[myPassw
 ```
 Replace *[myPassword]* with your own password for connecting to the database.
 
+Configure your app information by editing the package.json file in the root of your app:
+
+```js
+{
+  "name": "PeanutsJS", // NAME OF YOUR APP
+  "version": "1.0.0", // VERSION
+  "description": "MVC Framework for Nodejs server, using EJS, and mySQL database.", // DESCRIPTION
+  "main": "01-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alfredo Eleazar Orozco Quesada <ae.orozco10@uniandes.edu.co>", // AUTHOR
+  "license": "MIT", // LICENSE
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csurf": "^1.10.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.17.0",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7"
+  }
+}
+
+```
+
 Install your dependencies by running: 
 
 ```
