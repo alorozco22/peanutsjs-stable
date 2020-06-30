@@ -97,13 +97,13 @@ To use *PeanutsJS* locally, first configure your environment. Please follow the 
 Next, clone *PeanutsJS* repository into your computer:
 
 ```
-git clone https://github.com/alorozco22/peanutsjs.git
+git clone https://github.com/alorozco22/peanutsjs-stable.git
 ```
 
 Now, place your command prompt inside your *PeanutsJS* directory and install the required dependencies:
 
 ```
-cd peanutsjs
+cd peanutsjs-stable
 npm install
 ```
 
